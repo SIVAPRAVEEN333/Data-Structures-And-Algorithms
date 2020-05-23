@@ -1,4 +1,4 @@
-//recursion_callingPhase.c
+//recursion_returningPhase.c
 
 #include<stdio.h>
 
@@ -15,8 +15,8 @@ int fun1(int x)
 {
     if(x>0)
     {
+        printf("\n %d",x);            //processing while calling
         fun1(x-1);
-        printf("\nafter: %d",x);            //processing while returning
     }
     return 0;
 }
