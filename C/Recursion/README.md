@@ -62,6 +62,37 @@ delets from the stack so there is no more any record of the particular record
 
 
 
+//Recurrence Relation
+Time Complexity of recursion--> for eg: if it takes above eg the time is 
+
+T(n)=[1,T(n-1)+2,n=0,n>0 here n=0-> whenever the if conditions fails it takes time values as 1
+the time taken by the function depends by the number of calls
+
+
+
+//static and global variables in recursion
+why static variable doesnt change during execution? -> bcoz it will created in the main memory not in the stack or heap, and also stacic and global variable have a 
+seperate subset of memory under main memory. static variable is created at the loading time of the program so it will not get lost through function call.
+
+so it will remain when returns to the another function even in the local variable named static
+
+*imp: whenever you need to call the same function another time while the passing argumemt/variable is static or global then the value stored in the variable
+will be same still the last value bcoz it will not deleted from the memory it will be accesible to all the program
+
+
+//Types of recursion
+1.Tail Recursion -> All the operations will be done by only at the calling phase, nothing will be done during returning phase even during the function return everthing will be done in calling phase
+	         -> time is same for both if/loop statement is o(n);
+                 -> but in the space constraints looping is more efficient  because in recursion func again calling so it will allocate code activiation record in the stack 
+                  so in looping space=o(1) bcoz it is use while and -- so it taking 1 but in recursion using n so space is allocate in stack and returns with o(n)
+2.Head Recursion -> 
+3.Tree Recursion 
+4.Indirect Recursion
+5.Nested Recursion
+
+
+
+
 
 
 
