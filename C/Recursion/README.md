@@ -85,9 +85,12 @@ will be same still the last value bcoz it will not deleted from the memory it wi
 	         -> time is same for both if/loop statement is o(n);
                  -> but in the space constraints looping is more efficient  because in recursion func again calling so it will allocate code activiation record in the stack 
                   so in looping space=o(1) bcoz it is use while and -- so it taking 1 but in recursion using n so space is allocate in stack and returns with o(n)
-2.Head Recursion -> 
-3.Tree Recursion 
-4.Indirect Recursion
+2.Head Recursion -> All the operations will be done during the returning time nothing will be done during the calling phase of the  function callling time, process will do after all the recursion call
+		 ->time is same for both recursion and while
+		 ->but we can't able to convert the recursion into looping structure may be while loop but we can use adding extra variable to sort
+3.Tree Recursion ->recursion calling more than one time called tree recursion eg: whenever the function is calling in the returning phase after that again one more same recursion is calling itself
+calling tree recursion. while using tree recursion we need handle carefully otherwise it takes more time.
+4.Indirect Recursion ->
 5.Nested Recursion
 
 
