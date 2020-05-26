@@ -1,3 +1,4 @@
+***Recursion is costly it costs more (order of n)time and internally uses space in stack memory***
 function calls itself called recursion, it should have condition checking statement
 otherwise it's leads to the infinite loop
 
@@ -90,15 +91,71 @@ will be same still the last value bcoz it will not deleted from the memory it wi
 		 ->but we can't able to convert the recursion into looping structure may be while loop but we can use adding extra variable to sort
 3.Tree Recursion ->recursion calling more than one time called tree recursion eg: whenever the function is calling in the returning phase after that again one more same recursion is calling itself
 calling tree recursion. while using tree recursion we need handle carefully otherwise it takes more time.
-4.Indirect Recursion ->
-5.Nested Recursion
+4.Indirect Recursion -> it like calling  itself with anouther sub function bu the another subfunction is again calling
+			the same function like continous loop recursion this may call at both calling and returning phase or both.
+5.Nested Recursion ->the function which calles itself with argument as a same function call eg:
+		return fun(fun(n-1);	//nested recursion eg: is given in Data structure and algorithm note_1
 
+/******************************************************************************************/
+//Power recursion with space and time complexity common tips
 
+//powerRecursion.c
 
+/*
 
+#include<stdio.h>
 
+int power(int m,int n)
+{
+    if(n==0)
+    {
+        return 1;                   //if its add,sub we can return 0 but here pro so we need to return 1 anything produ than its will be same number
+    }
+    else
+    {
+        return power(m,n-1)*m;
+    }
+}
+/*
+* The normal the above power function return the power of the certain value but 
+* the time taken and space complexity is order of n  depends upon the number of
+* function called so that the code activation record will be allocated in the stack
+* so that stack memory size will be increased to reduce the size of the code activation record
+* in the stack we need to minimize using loops because recursion always takes the more time 
+* and spacec complexity(those time and space always depends on the number of function called),
+* And another way is for divided the function calls, for eg here the power called fun refer here.
 
+int power1(int m,int n)
+{
+    if(n==0)
+    {
+        return 1;
+    }
+    else if(n%2==0)
+    {
+        return power1(m*m,n/2);
+    }
+    else
+    {
+        return m*power1(m*m,(n-1)/2);
+    }
+}
 
+int main()
+{
+    int m,n;
+    printf("Enter the values of m(value to be powered) and n(number of times): ");
+    scanf("%d %d",&m,&n);
+    int power_result=power(m,n);
+    printf("\nThe %d(m) Power of %d(n) is: %d",m,n,power_result);
+    int power1_result=power1(m,n);
+    printf("\nThe %d(m) power of %d(n) is: %d",m,n,power1_result);
+    return 0;
+}
+
+*/
+
+/****************************************************************************************/
 
 
 
