@@ -2,6 +2,9 @@
 function calls itself called recursion, it should have condition checking statement
 otherwise it's leads to the infinite loop
 
+*whatever the recursion takesplace the function called atlast will process during the returing stage with the next value eg: sum(n-1)+1 means this 1 will add at the returning time of the function call
+
+
 *Recursion has two Phase:
 	1.Calling Phase
 	2.Returning Phase
